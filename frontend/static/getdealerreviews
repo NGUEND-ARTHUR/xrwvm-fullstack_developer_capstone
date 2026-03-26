@@ -1,0 +1,6 @@
+C:\Users\Nguend Arthur Johann\Desktop\xrwvm-fullstack_developer_capstone>curl -X GET http://127.0.0.1:8000/fetchReviews/dealer/1
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+100   2708 100   2708   0      0  15235      0                              0
+
+(Output of the command is saved in this file. Please check the actual content of the file for the JSON response.)

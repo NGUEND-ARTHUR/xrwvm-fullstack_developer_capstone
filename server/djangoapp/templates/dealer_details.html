@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dealer Details</title>
+    <style>
+        .dealer-details { margin-bottom: 20px; }
+        .reviews { margin-top: 20px; }
+        .review-item { margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+    <h1>Dealer Details</h1>
+    <div class="dealer-details">
+        <strong>Name:</strong> {{ dealer.name }}<br>
+        <strong>Address:</strong> {{ dealer.address }}, {{ dealer.city }}, {{ dealer.state }} {{ dealer.zip_code }}<br>
+    </div>
+    <h2>Reviews</h2>
+    <div class="reviews">
+        {% if reviews %}
+            <ul>
+                {% for review in reviews %}
+                    <li class="review-item">
+                        <strong>{{ review.reviewer }}</strong> ({{ review.created_at|date:'Y-m-d H:i' }})<br>
+                        Rating: {{ review.rating }}<br>
+                        {{ review.review }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No reviews for this dealer.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

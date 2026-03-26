@@ -1,0 +1,2 @@
+curl -X GET http://127.0.0.1:8000/djangoapp/getalldealers
+[{"id": 1, "name": "Alpha Motors", "address": "123 Main St", "city": "New York", "state": "NY", "zip_code": "10001"}, {"id": 2, "name": "Beta Autos", "address": "456 Sunset Blvd", "city": "Los Angeles", "state": "CA", "zip_code": "90001"}, {"id": 3, "name": "Gamma Cars", "address": "789 Lake Shore Dr", "city": "Chicago", "state": "IL", "zip_code": "60601"}]

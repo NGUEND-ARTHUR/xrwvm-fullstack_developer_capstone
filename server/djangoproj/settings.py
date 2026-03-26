@@ -136,3 +136,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = []
 
+# Set the login URL for @login_required redirects
+LOGIN_URL = '/djangoapp/login'
+
