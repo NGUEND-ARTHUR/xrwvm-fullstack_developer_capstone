@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Register.css";
 
 const Register = () => {
   const [form, setForm] = useState({
@@ -7,7 +6,7 @@ const Register = () => {
     firstName: "",
     lastName: "",
     email: "",
-    password: ""
+    password: "",
   });
 
   const handleChange = (e) => {
@@ -17,64 +16,74 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Submit logic here (e.g., API call)
-    alert("Registered successfully! (Demo only)");
+    alert("Registration submitted:\n" + JSON.stringify(form, null, 2));
   };
 
   return (
-    <div className="register-container">
-      <h2>Sign-up</h2>
-      <form onSubmit={handleSubmit} className="register-form">
-        <label>
-          Username
+    <div className="container mt-5" style={{ maxWidth: "400px" }}>
+      <h2 className="mb-4 text-center">Sign Up</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="mb-3">
+          <label htmlFor="username" className="form-label">Username</label>
           <input
             type="text"
+            className="form-control"
+            id="username"
             name="username"
             value={form.username}
             onChange={handleChange}
             required
           />
-        </label>
-        <label>
-          First Name
+        </div>
+        <div className="mb-3">
+          <label htmlFor="firstName" className="form-label">First Name</label>
           <input
             type="text"
+            className="form-control"
+            id="firstName"
             name="firstName"
             value={form.firstName}
             onChange={handleChange}
             required
           />
-        </label>
-        <label>
-          Last Name
+        </div>
+        <div className="mb-3">
+          <label htmlFor="lastName" className="form-label">Last Name</label>
           <input
             type="text"
+            className="form-control"
+            id="lastName"
             name="lastName"
             value={form.lastName}
             onChange={handleChange}
             required
           />
-        </label>
-        <label>
-          Email
+        </div>
+        <div className="mb-3">
+          <label htmlFor="email" className="form-label">Email</label>
           <input
             type="email"
+            className="form-control"
+            id="email"
             name="email"
             value={form.email}
             onChange={handleChange}
             required
           />
-        </label>
-        <label>
-          Password
+        </div>
+        <div className="mb-3">
+          <label htmlFor="password" className="form-label">Password</label>
           <input
             type="password"
+            className="form-control"
+            id="password"
             name="password"
             value={form.password}
             onChange={handleChange}
             required
           />
-        </label>
-        <button type="submit">Register</button>
+        </div>
+        <button type="submit" className="btn btn-primary w-100">Register</button>
       </form>
     </div>
   );
