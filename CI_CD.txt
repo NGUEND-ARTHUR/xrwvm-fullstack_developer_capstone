@@ -1,0 +1,113 @@
+1s
+Current runner version: '2.333.0'
+Runner Image Provisioner
+Operating System
+Runner Image
+GITHUB_TOKEN Permissions
+Secret source: Actions
+Prepare workflow directory
+Prepare all required actions
+Getting action download info
+Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+Download action repository 'actions/setup-python@v3' (SHA:3542bca2639a428e1796aaa6a2ffef0c0f575566)
+Complete job name: build (3.8)
+1s
+Run actions/checkout@v4
+Syncing repository: NGUEND-ARTHUR/xrwvm-fullstack_developer_capstone
+Getting Git version info
+Temporarily overriding HOME='/home/runner/work/_temp/eb385ad5-d91a-4b29-b794-13f9f4ee2a76' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+/usr/bin/git config --global --add safe.directory /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone
+Deleting the contents of '/home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone'
+Initializing the repository
+Disabling automatic garbage collection
+Setting up auth
+Fetching the repository
+Determining the checkout info
+/usr/bin/git sparse-checkout disable
+/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Checking out the ref
+/usr/bin/git log -1 --format=%H
+fb5bacb141ee52c49da7009296208d4cd2229b92
+7s
+Run actions/setup-python@v3
+Version 3.8 was not found in the local cache
+Version 3.8 is available for downloading
+Download from "https://github.com/actions/python-versions/releases/download/3.8.18-12303122501/python-3.8.18-linux-24.04-x64.tar.gz"
+Extract downloaded archive
+/usr/bin/tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/2c678a73-a232-48b7-a8c2-bfb059fd51ea -f /home/runner/work/_temp/9b19d0be-768e-4d31-b198-b6ff961baff9
+Execute installation script
+Check if Python hostedtoolcache folder exist...
+Create Python 3.8.18 folder
+Copy Python binaries to hostedtoolcache folder
+Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+Upgrading pip...
+Looking in links: /tmp/tmpdgrsxc5c
+Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (56.0.0)
+Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (23.0.1)
+Collecting pip
+Downloading pip-25.0.1-py3-none-any.whl (1.8 MB)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 17.4 MB/s eta 0:00:00
+
+Installing collected packages: pip
+Attempting uninstall: pip
+Found existing installation: pip 23.0.1
+Uninstalling pip-23.0.1:
+Successfully uninstalled pip-23.0.1
+Successfully installed pip-25.0.1
+Create complete file
+Successfully setup CPython (3.8.18)
+3s
+Run python -m pip install --upgrade pip
+Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (25.0.1)
+Collecting Django>=3.2 (from -r requirements.txt (line 1))
+  Downloading django-4.2.29-py3-none-any.whl.metadata (4.2 kB)
+Collecting djangorestframework (from -r requirements.txt (line 2))
+  Downloading djangorestframework-3.15.2-py3-none-any.whl.metadata (10 kB)
+Collecting asgiref<4,>=3.6.0 (from Django>=3.2->-r requirements.txt (line 1))
+  Downloading asgiref-3.8.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting backports.zoneinfo (from Django>=3.2->-r requirements.txt (line 1))
+  Downloading backports.zoneinfo-0.2.1-cp38-cp38-manylinux1_x86_64.whl.metadata (4.7 kB)
+Collecting sqlparse>=0.3.1 (from Django>=3.2->-r requirements.txt (line 1))
+  Downloading sqlparse-0.5.5-py3-none-any.whl.metadata (4.7 kB)
+Collecting typing-extensions>=4 (from asgiref<4,>=3.6.0->Django>=3.2->-r requirements.txt (line 1))
+  Downloading typing_extensions-4.13.2-py3-none-any.whl.metadata (3.0 kB)
+Downloading django-4.2.29-py3-none-any.whl (8.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.0/8.0 MB 114.7 MB/s eta 0:00:00
+Downloading djangorestframework-3.15.2-py3-none-any.whl (1.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 154.8 MB/s eta 0:00:00
+Downloading asgiref-3.8.1-py3-none-any.whl (23 kB)
+Downloading sqlparse-0.5.5-py3-none-any.whl (46 kB)
+Downloading backports.zoneinfo-0.2.1-cp38-cp38-manylinux1_x86_64.whl (74 kB)
+Downloading typing_extensions-4.13.2-py3-none-any.whl (45 kB)
+Installing collected packages: typing-extensions, sqlparse, backports.zoneinfo, asgiref, Django, djangorestframework
+Successfully installed Django-4.2.29 asgiref-3.8.1 backports.zoneinfo-0.2.1 djangorestframework-3.15.2 sqlparse-0.5.5 typing-extensions-4.13.2
+0s
+Run python manage.py test
+Found 0 test(s).
+System check identified no issues (0 silenced).
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+0s
+Post job cleanup.
+0s
+Post job cleanup.
+/usr/bin/git version
+git version 2.53.0
+Temporarily overriding HOME='/home/runner/work/_temp/5d2a29e3-d06f-4da3-8377-220eb1b81aca' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+/usr/bin/git config --global --add safe.directory /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone
+/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+http.https://github.com/.extraheader
+/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+1s
+Cleaning up orphan processes
+Warning: Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-python@v3. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
