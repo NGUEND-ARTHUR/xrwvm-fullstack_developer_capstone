@@ -10,11 +10,28 @@
         {% csrf_token %}
         <label for="review">Review:</label><br>
         <textarea id="review" name="review" rows="4" cols="50" required></textarea><br><br>
+
         <label for="rating">Rating (1-5):</label>
         <input type="number" id="rating" name="rating" min="1" max="5" required><br><br>
+
         <label for="purchase">Purchased a car?</label>
         <input type="checkbox" id="purchase" name="purchase"><br><br>
-        <button type="submit">Submit Review</button>
+
+        <label for="purchase_date">Purchase Date:</label>
+        <input type="date" id="purchase_date" name="purchase_date"><br><br>
+
+        <label for="car_make">Car Make:</label>
+        <select id="car_make" name="car_make" required>
+            <option value="">Select Make</option>
+            {% for make in car_makes %}
+                <option value="{{ make }}">{{ make }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label for="car_year">Car Year:</label>
+        <input type="number" id="car_year" name="car_year" min="1900" max="2100"><br><br>
+
+        <button type="submit">Post Review</button>
     </form>
 </body>
 </html>

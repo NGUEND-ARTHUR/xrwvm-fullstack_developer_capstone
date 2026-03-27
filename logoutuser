@@ -1,7 +1,3 @@
-# cURL command and output for logout operation
+curl -X GET http://localhost:8000/djangoapp/logout -b cookies.txt
 
-## Command
-curl -X POST http://localhost:8000/djangoapp/logout -c cookies.txt -b cookies.txt
-
-## Output
-{"status": "Logged out"}
+{"userName": "", "status": "Logged out"}

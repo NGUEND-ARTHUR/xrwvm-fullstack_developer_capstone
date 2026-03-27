@@ -7,8 +7,10 @@ from django.http import HttpResponseBadRequest
 @csrf_exempt
 def add_review(request, dealer_id):
     if request.method == 'GET':
-        # Render the review form
-        return render(request, 'add_review.html', {'dealer_id': dealer_id})
+        # Import CarMake ici pour éviter les imports circulaires
+        from djangoapp.models import CarMake
+        car_makes = CarMake.objects.all().values_list('name', flat=True)
+        return render(request, 'add_review.html', {'dealer_id': dealer_id, 'car_makes': car_makes})
     elif request.method == 'POST':
         from djangoapp.models import DealerReview
         review_text = request.POST.get('review')
