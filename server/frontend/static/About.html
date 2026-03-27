@@ -1,13 +1,17 @@
+<!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <title>About Us - Dealerships</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     .title { font-weight: bold; font-size: 1.2em; }
     .card-img-top { height: 200px; object-fit: cover; }
+    .footer { margin-top: 2em; padding: 1em 0; background: #f8f9fa; text-align: center; }
   </style>
 </head>
-<div>
+<body>
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
     <div class="container-fluid">
       <h2 style="padding-right: 5%;">Dealerships</h2>
@@ -30,47 +34,48 @@
     </div>
   </nav>
   
-    <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
-      <div class="banner" name="about-header">
-        <h1 class="text-center mt-4">Meet Our Team</h1>
-        <p class="text-center">We are passionate developers dedicated to building robust dealership solutions.</p>
-      </div>
-      <div style="display: flex;flex-direction: row; margin:auto; justify-content: space-around;">
-        <!-- Member 1: User -->
-        <div class="card" style="width: 30%; margin: 1em;">
-          <img class="card-img-top" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Nguend Arthur Johann">
-          <div class="card-body">
-            <p class="title">Nguend Arthur Johann</p>
-            <p>Full Stack Developer</p>
-            <p class="card-text">Experienced in Django and React, Johann is passionate about building scalable web applications and cloud solutions for modern businesses.</p>
-            <p>nguend.johann@ictuniversity.edu.cm</p>
-          </div>
-        </div>
-        <!-- Member 2: Sample -->
-        <div class="card" style="width: 30%; margin: 1em;">
-          <img class="card-img-top" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane Smith">
-          <div class="card-body">
-            <p class="title">Jane Smith</p>
-            <p>Frontend Engineer</p>
-            <p class="card-text">Jane specializes in UI/UX and React development, ensuring every user has a seamless and beautiful experience on our platform.</p>
-            <p>jane.smith@email.com</p>
-          </div>
-        </div>
-        <!-- Member 3: Sample -->
-        <div class="card" style="width: 30%; margin: 1em;">
-          <img class="card-img-top" src="https://randomuser.me/api/portraits/men/65.jpg" alt="Michael Lee">
-          <div class="card-body">
-            <p class="title">Michael Lee</p>
-            <p>Backend Engineer</p>
-            <p class="card-text">Michael is a backend expert with a focus on APIs, databases, and cloud integration, making sure our systems are fast and reliable.</p>
-            <p>michael.lee@email.com</p>
-          </div>
+  <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
+    <div class="banner" name="about-header">
+      <h1 class="text-center mt-4">Meet Our Team</h1>
+      <p class="text-center">We are passionate developers dedicated to building robust dealership solutions.</p>
+    </div>
+    <div style="display: flex;flex-direction: row; margin:auto; justify-content: space-around;">
+      <!-- Member 1: User -->
+      <div class="card" style="width: 30%; margin: 1em;">
+        <img class="card-img-top" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Nguend Arthur Johann photo">
+        <div class="card-body">
+          <p class="title">Nguend Arthur Johann</p>
+          <p>Full Stack Developer</p>
+          <p class="card-text">Experienced in Django and React, Johann is passionate about building scalable web applications and cloud solutions for modern businesses.</p>
+          <p><a href="mailto:nguend.johann@ictuniversity.edu.cm">nguend.johann@ictuniversity.edu.cm</a></p>
         </div>
       </div>
+      <!-- Member 2: Sample -->
+      <div class="card" style="width: 30%; margin: 1em;">
+        <img class="card-img-top" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane Smith photo">
+        <div class="card-body">
+          <p class="title">Jane Smith</p>
+          <p>Frontend Engineer</p>
+          <p class="card-text">Jane specializes in UI/UX and React development, ensuring every user has a seamless and beautiful experience on our platform.</p>
+          <p><a href="mailto:jane.smith@email.com">jane.smith@email.com</a></p>
+        </div>
+      </div>
+      <!-- Member 3: Sample -->
+      <div class="card" style="width: 30%; margin: 1em;">
+        <img class="card-img-top" src="https://randomuser.me/api/portraits/men/65.jpg" alt="Michael Lee photo">
+        <div class="card-body">
+          <p class="title">Michael Lee</p>
+          <p>Backend Engineer</p>
+          <p class="card-text">Michael is a backend expert with a focus on APIs, databases, and cloud integration, making sure our systems are fast and reliable.</p>
+          <p><a href="mailto:michael.lee@email.com">michael.lee@email.com</a></p>
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
-    
-</div>
-
+  </div>
+  <div class="footer">
+    &copy; 2026 Dealerships Team. All rights reserved.
+  </div>
+  <!-- Bootstrap JS (optional, for navbar toggling) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
